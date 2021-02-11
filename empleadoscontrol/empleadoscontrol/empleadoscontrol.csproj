@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FEBCFEDD-DD0F-47AF-8486-E12C2195AF21}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>empleadoscontrol</RootNamespace>
+    <AssemblyName>empleadoscontrol</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BarcodeStandard, Version=2.2.5.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BarcodeLib.2.2.5\lib\netstandard2.0\BarcodeStandard.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.5\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="SpreadsheetLight, Version=3.4.11.0, Culture=neutral, PublicKeyToken=32fbb46dc1730c57, processorArchitecture=MSIL">
+      <HintPath>..\packages\SpreadsheetLight.3.4.11\lib\net40\SpreadsheetLight.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Drawing.Common.4.5.1\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="formato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formato.Designer.cs">
+      <DependentUpon>formato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="generar_reporte_individual.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="generar_reporte_individual.Designer.cs">
+      <DependentUpon>generar_reporte_individual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="generar_reporte_general.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="generar_reporte_general.Designer.cs">
+      <DependentUpon>generar_reporte_general.cs</DependentUpon>
+    </Compile>
+    <Compile Include="imprimirEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="imprimirEmpleado.Designer.cs">
+      <DependentUpon>imprimirEmpleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mantenimiento_empleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mantenimiento_empleado.Designer.cs">
+      <DependentUpon>mantenimiento_empleado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registrar_salidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrar_salidas.Designer.cs">
+      <DependentUpon>registrar_salidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registrar_entradas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registrar_entradas.Designer.cs">
+      <DependentUpon>registrar_entradas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="mdi_control.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdi_control.Designer.cs">
+      <DependentUpon>mdi_control.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="seguridad.cs" />
+    <Compile Include="validarTextbox.cs" />
+    <EmbeddedResource Include="formato.resx">
+      <DependentUpon>formato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="generar_reporte_individual.resx">
+      <DependentUpon>generar_reporte_individual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="generar_reporte_general.resx">
+      <DependentUpon>generar_reporte_general.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="imprimirEmpleado.resx">
+      <DependentUpon>imprimirEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mantenimiento_empleado.resx">
+      <DependentUpon>mantenimiento_empleado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrar_salidas.resx">
+      <DependentUpon>registrar_salidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registrar_entradas.resx">
+      <DependentUpon>registrar_entradas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="mdi_control.resx">
+      <DependentUpon>mdi_control.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
